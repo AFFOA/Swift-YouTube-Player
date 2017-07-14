@@ -84,6 +84,14 @@ open class YouTubePlayerView: UIView, UIWebViewDelegate {
     
     public typealias YouTubePlayerParameters = [String: AnyObject]
     public var baseURL = "about:blank"
+    public var allowsInlineMediaPlayback: Bool {
+        get {
+            return webView.allowsInlineMediaPlayback
+        }
+        set {
+            webView.allowsInlineMediaPlayback = newValue
+        }
+    }
     
     fileprivate var webView: UIWebView!
     
